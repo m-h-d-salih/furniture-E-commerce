@@ -6,18 +6,52 @@ export const MyContext = createContext();
 const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
   const id = localStorage.getItem("id");
-  const [isLogged,setIsLogged]=useState(false )
+  const [isLogged,setIsLogged]=useState(false );
+  const [userlist,setUserlist]=useState([]);
+  const [orderlist,setOrderlist]=useState(['mhg']);
+  const [productslist,setProductslist]=useState([]);
  
 
   useEffect(() => {
    
       axios.get(`http://localhost:8000/user/${id}`).then((res) => {
-        console.log(res.data.cart);
+        // console.log(res.data.cart);
         setCart(res.data.cart);
       })
       .catch(error=>console.log(error));
    
   }, []);
+
+  useEffect(() => {
+   
+      axios.get(`http://localhost:8000/user`).then((res) => {
+        // console.log(res.data);
+        setUserlist(res.data);
+      })
+      .catch(error=>console.log(error));
+   
+  }, []);
+  useEffect(() => {
+   
+      axios.get(`http://localhost:8000/user`).then((res) => {
+        const mapedorder=res.data.filter(item=>item.order.length>0);
+        // console.log(mapedorder.length);
+        setOrderlist(mapedorder);
+      
+      })
+      .catch(error=>console.log('error'));
+   
+  }, []);
+  useEffect(() => {
+   
+      axios.get(`http://localhost:8000/products`).then((res) => {
+        setProductslist(res.data);
+       
+      })
+      .catch(error=>console.log(error));
+      
+  }, []);
+  
   // const login=()=>{
   //   setIsLogged(true)
   //   console.log(isLogged);
@@ -77,7 +111,7 @@ const CartProvider = ({ children }) => {
   // console.log(cart);
 
   return (
-    <MyContext.Provider value={{ cart, addToCart, removeCart, updateQuantity,setIsLogged,isLogged }}>
+    <MyContext.Provider value={{ cart, addToCart, removeCart, updateQuantity,setIsLogged,isLogged,userlist,orderlist,productslist }}>
       {children}
     </MyContext.Provider>
   );
