@@ -69,7 +69,7 @@ function UserCart() {
         </span>
         <button
           className="bg-orange-500 text-white p-2 rounded hover:bg-slate-900"
-          onClick={() => {navigate('/payment')}}
+          onClick={() => {navigate('/paymentaddress')}}
         >
           Place Order
         </button>

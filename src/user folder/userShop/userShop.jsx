@@ -4,9 +4,9 @@ import axios from "axios";
 
 
 function UserShop() {
-  const { addToCart } = useContext(MyContext);
+  const { addToCart ,products} = useContext(MyContext);
   const [searchTerm, setSearchTerm] = useState('');
-  const[products,setProducts]=useState([])
+  // const[products,setProducts]=useState([])
   
   const handleSearchChange = (event) => {
     setSearchTerm(event.target.value);
@@ -54,11 +54,11 @@ function UserShop() {
 
   //   },
   // ];
-useEffect(()=>{
-axios.get(`http://localhost:8000/products`)
-.then(res=>setProducts(res.data))
+// useEffect(()=>{
+// axios.get(`http://localhost:8000/products`)
+// .then(res=>setProducts(res.data))
   
-},[])
+// },[])
  
 
   const  filteredProduct= products.filter(item =>

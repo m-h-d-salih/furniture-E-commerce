@@ -35,13 +35,22 @@ function UserLoginForm() {
               axios
                 .get(`http://localhost:8000/user`)
                 .then((res) => {
+                  const admindata=res.data.find(item => values.email === 'admin@gmail.com' && values.password === 'iamadmin');
                   const findeddata = res.data.find(item => item.email === values.email && item.password === values.password);
                   const existData = res.data.find(item => item.email === values.email && item.password !== values.password);
-                  if (findeddata) {
+                  if(admindata)
+                  {
+                    toast.success('welcome admin');
+                    localStorage.setItem('id', findeddata.id);
+                    setIsLogged(true);
+                    // console.log(isLogged);
+                    setTimeout(() => navigate("/admin"), 1000);
+                  }
+                  else if (findeddata) {
                     toast.success('Login successful');
                     localStorage.setItem('id', findeddata.id);
                     setIsLogged(true);
-                    console.log(isLogged);
+                    // console.log(isLogged);
                     setTimeout(() => navigate("/"), 1000);
                   } else if (existData) {
                     toast.error('Enter your password correctly');

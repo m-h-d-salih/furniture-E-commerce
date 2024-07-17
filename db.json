@@ -1,11 +1,11 @@
 {
   "user": [
     {
-      "id": "d9a2",
-      "name": "salih",
-      "email": "salihsha656@gmail.com",
-      "password": "12345678",
-      "confirmPassword": "12345678",
+      "id": "5fb7",
+      "name": "nidha",
+      "email": "nidhasalih@gmail.com",
+      "password": "nidhasalih",
+      "confirmPassword": "nidhasalih",
       "cart": [
         {
           "id": "2",
@@ -29,18 +29,18 @@
       "order": []
     },
     {
-      "id": "5fb7",
-      "name": "nidha",
-      "email": "nidhasalih@gmail.com",
-      "password": "nidhasalih",
-      "confirmPassword": "nidhasalih",
+      "id": "04de",
+      "name": "salih",
+      "email": "salihsha656@gmail.com",
+      "password": "12345678",
+      "confirmPassword": "12345678",
       "cart": [
         {
-          "id": "1",
-          "urlimg": "https://shop.gkwretail.com/cdn/shop/products/Designer-Sofa-Set-in-Fabric-L-Shape_2.png?v=1651899140",
-          "title": "Designer Sofa Set in Fabric",
+          "id": "3",
+          "urlimg": "https://images.pexels.com/photos/116910/pexels-photo-116910.jpeg?cs=srgb&dl=pexels-mikebirdy-116910.jpg&fm=jpg",
+          "title": "Stylish Living Room chair",
           "price": 800,
-          "category": "sofa",
+          "category": "chair",
           "quantity": 1,
           "description": "Furniture refers to household equipment that serves various purposes. It can be made from materials such as wood, metal, plastics, marble, glass, fabrics, or related materials."
         }
@@ -48,44 +48,34 @@
       "order": []
     },
     {
-      "id": "1957",
-      "name": "anas",
-      "email": "anas@gmail.com",
-      "password": "anaskundan",
-      "confirmPassword": "anaskundan",
-      "cart": [
-        {
-          "id": "1",
-          "urlimg": "https://shop.gkwretail.com/cdn/shop/products/Designer-Sofa-Set-in-Fabric-L-Shape_2.png?v=1651899140",
-          "title": "Designer Sofa Set in Fabric",
-          "price": 800,
-          "category": "sofa",
-          "quantity": 1,
-          "description": "Furniture refers to household equipment that serves various purposes. It can be made from materials such as wood, metal, plastics, marble, glass, fabrics, or related materials."
-        },
-        {
-          "id": "2",
-          "urlimg": "https://images.woodenstreet.de/image/data/bed-with-storage-mdf/harper-bed-with-box-storage/exotic-teak/updated/1.jpg",
-          "title": "Harper Bed with Box",
-          "price": 800,
-          "category": "bed",
-          "quantity": 1,
-          "description": "Furniture refers to household equipment that serves various purposes. It can be made from materials such as wood, metal, plastics, marble, glass, fabrics, or related materials."
-        }
-      ],
+      "id": "b351",
+      "name": "mueen",
+      "email": "mueen@gmail.com",
+      "password": "12345678",
+      "confirmPassword": "12345678",
+      "cart": [],
+      "order": []
+    },
+    {
+      "id": "f7f4",
+      "name": "amal",
+      "email": "amal@gmail.com",
+      "password": "amalkundan",
+      "confirmPassword": "amalkundan",
+      "cart": [],
+      "order": []
+    },
+    {
+      "id": "ef2c",
+      "name": "admin",
+      "email": "admin@gmail.com",
+      "password": "iamadmin",
+      "confirmPassword": "iamadmin",
+      "cart": [],
       "order": []
     }
   ],
   "products": [
-    {
-      "id": "1",
-      "urlimg": "https://shop.gkwretail.com/cdn/shop/products/Designer-Sofa-Set-in-Fabric-L-Shape_2.png?v=1651899140",
-      "title": "Designer Sofa Set in Fabric",
-      "price": 800,
-      "category": "sofa",
-      "quantity": 1,
-      "description": "Furniture refers to household equipment that serves various purposes. It can be made from materials such as wood, metal, plastics, marble, glass, fabrics, or related materials."
-    },
     {
       "id": "2",
       "urlimg": "https://images.woodenstreet.de/image/data/bed-with-storage-mdf/harper-bed-with-box-storage/exotic-teak/updated/1.jpg",
@@ -96,20 +86,38 @@
       "description": "Furniture refers to household equipment that serves various purposes. It can be made from materials such as wood, metal, plastics, marble, glass, fabrics, or related materials."
     },
     {
-      "id": "3",
-      "urlimg": "https://images.pexels.com/photos/116910/pexels-photo-116910.jpeg?cs=srgb&dl=pexels-mikebirdy-116910.jpg&fm=jpg",
-      "title": "Stylish Living Room chair",
-      "price": 800,
-      "category": "chair",
-      "quantity": 1,
-      "description": "Furniture refers to household equipment that serves various purposes. It can be made from materials such as wood, metal, plastics, marble, glass, fabrics, or related materials."
-    },
-    {
       "id": "4",
       "urlimg": "https://t4.ftcdn.net/jpg/02/57/64/17/360_F_257641770_4eAFTJQK3QiEoymyVYyKdXMBRocN1eKw.jpg",
       "title": "Modern Office cabord",
       "price": 800,
       "category": "cabord",
+      "quantity": 1,
+      "description": "Furniture refers to household equipment that serves various purposes. It can be made from materials such as wood, metal, plastics, marble, glass, fabrics, or related materials."
+    },
+    {
+      "id": "5",
+      "urlimg": "https://5.imimg.com/data5/SELLER/Default/2024/3/404616160/BA/KZ/PD/24135102/luxury-bedroom-furniture-wooden-bed-500x500.webp",
+      "title": "luxuary bed",
+      "price": 8100,
+      "category": "bed",
+      "quantity": 1,
+      "description": "Furniture refers to household equipment that serves various purposes. It can be made from materials such as wood, metal, plastics, marble, glass, fabrics, or related materials."
+    },
+    {
+      "id": "6",
+      "urlimg": "https://rajadigitalplanets.com/cdn/shop/products/61KydgWLemL_800x.jpg?v=1633516868",
+      "title": "dinning sofa",
+      "price": 1100,
+      "category": "sofa",
+      "quantity": 1,
+      "description": "Furniture refers to household equipment that serves various purposes. It can be made from materials such as wood, metal, plastics, marble, glass, fabrics, or related materials."
+    },
+    {
+      "id": "7",
+      "urlimg": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZ_sk39M1CQ_d53Sd1G8zfWxZ9YqIm21UXYQ&s",
+      "title": "wooden arm chair",
+      "price": 1100,
+      "category": "chair",
       "quantity": 1,
       "description": "Furniture refers to household equipment that serves various purposes. It can be made from materials such as wood, metal, plastics, marble, glass, fabrics, or related materials."
     }

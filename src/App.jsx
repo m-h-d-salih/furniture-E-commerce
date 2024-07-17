@@ -10,9 +10,12 @@ import UserShop from "./user folder/userShop/userShop";
 import UserCart from "./userCart/userCart";
 import Userhome from "./user folder/userhome/userhomepage";
 import UserPayment from "./user folder/userPayment/userPayment";
-import AdminSidebar from "./adminFolder/components/adminSidebar";
-import AdminHome from "./adminFolder/components/adminHome";
+import Adminnavbar from "./adminFolder/components/adminnavbar";
+import AdminHome from "./adminFolder/components/adminHomme";
 import Userlist from "./adminFolder/components/userlist";
+import AdminProducts from "./adminFolder/components/adminProducts";
+import UserPaymentaddress from "./user folder/userPayment/userPaymentaddress";
+
 
 // import CartProvider from "./context/cartContext";
 
@@ -32,11 +35,13 @@ function App() {
           <Route path="signup" element={<Userregistrationform />} />
           <Route path="login" element={<Userloginform />} />
           <Route path="payment" element={<UserPayment />} />
+          <Route path="paymentaddress" element={<UserPaymentaddress/>}/>
 
-          <Route path="admin" element={<AdminSidebar />}>
-             <Route index element={<AdminHome />} />
-             <Route path="userlist" element={<Userlist/>}/>
-    </Route>
+          <Route path="admin" element={<Adminnavbar/>}>
+             <Route index element={<AdminHome/>}/>
+             <Route path="admin/users" element={<Userlist/>}/>
+             <Route path="admin/products" element={<AdminProducts/>}/>
+         </Route>
         </Routes>
       </BrowserRouter>
       {/* </CartProvider> */}
