@@ -63,6 +63,7 @@ const CartProvider = ({ children }) => {
     setProducts(removedproduct);
     // console.log(removedproduct);
   };
+ 
 
   // const login=()=>{
   //   setIsLogged(true)
@@ -128,7 +129,10 @@ const CartProvider = ({ children }) => {
       .catch((error) => console.log("error"));
     setUsers(users.filter((item) => item.id != userId));
   };
-  const editProduct = () => {};
+  const editProduct = () => {
+    
+
+  };
 
   // console.log(cart);
 

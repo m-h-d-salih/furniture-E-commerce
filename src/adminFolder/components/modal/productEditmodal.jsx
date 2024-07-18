@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Formik, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import axios from 'axios';
@@ -13,15 +13,17 @@ const validationSchema = Yup.object({
   description: Yup.string().required('Required'),
 });
 
-function ProductModal({ onClose }) {
-  const {products,setProducts}=useContext(MyContext)
-    const initialValues = {
-    urlimg: '',
-    title: '',
-    price: '',
-    category: '',
-    quantity: '',
-    description: '',
+function ProductEditModal({ onClose,product }) {
+  const {products,setProducts}=useContext(MyContext);
+//   const [isModalOpen, setModalOpen] = useState(false);   
+
+  const initialValues = {
+    urlimg: product.urlimg,
+    title: product.title,
+    price: product.price,
+    category: product.category,
+    quantity: product.quantity,
+    description: product.description,
   };
   return (
     <div>
@@ -41,18 +43,12 @@ function ProductModal({ onClose }) {
             validationSchema={validationSchema}
             onSubmit={(values, { setSubmitting }) => {
               console.log(values);
-              axios.post(`http://localhost:8000/products`,values)
-              .then(res=>{console.log('done');
-                setProducts([...products,values]);
-                
-              })
-              .catch(error=>console.log('error'))
-              .finally(() => {
-                setSubmitting(false);
-                onClose();
-              });
              
-            }}
+              setSubmitting(false);
+              onClose();
+            }
+        
+        }
           >
             {({ isSubmitting, handleChange, handleBlur }) => (
               <Form>
@@ -64,6 +60,7 @@ function ProductModal({ onClose }) {
                     onChange={handleChange}
                     onBlur={handleBlur}
                     className="mt-1 p-2 border border-gray-400 rounded w-full"
+                    value={initialValues.urlimg}
                   />
                   <ErrorMessage name="urlimg" component="div" className="text-red-500 text-sm" />
                 </div>
@@ -75,6 +72,7 @@ function ProductModal({ onClose }) {
                     onChange={handleChange}
                     onBlur={handleBlur}
                     className="mt-1 p-2 border border-gray-400 rounded w-full"
+                    value={initialValues.title}
                   />
                   <ErrorMessage name="title" component="div" className="text-red-500 text-sm" />
                 </div>
@@ -86,6 +84,7 @@ function ProductModal({ onClose }) {
                     onChange={handleChange}
                     onBlur={handleBlur}
                     className="mt-1 p-2 border border-gray-400 rounded w-full"
+                    value={initialValues.price}
                   />
                   <ErrorMessage name="price" component="div" className="text-red-500 text-sm" />
                 </div>
@@ -97,6 +96,7 @@ function ProductModal({ onClose }) {
                     onChange={handleChange}
                     onBlur={handleBlur}
                     className="mt-1 p-2 border border-gray-400 rounded w-full"
+                    value={initialValues.category}
                   />
                   <ErrorMessage name="category" component="div" className="text-red-500 text-sm" />
                 </div>
@@ -108,6 +108,7 @@ function ProductModal({ onClose }) {
                     onChange={handleChange}
                     onBlur={handleBlur}
                     className="mt-1 p-2 border border-gray-400 rounded w-full"
+                    value={initialValues.quantity}
                   />
                   <ErrorMessage name="quantity" component="div" className="text-red-500 text-sm" />
                 </div>
@@ -119,6 +120,7 @@ function ProductModal({ onClose }) {
                     onChange={handleChange}
                     onBlur={handleBlur}
                     className="mt-1 p-2 border border-gray-400 rounded w-full"
+                    value={initialValues.description}
                   />
                   <ErrorMessage name="description" component="div" className="text-red-500 text-sm" />
                 </div>
@@ -147,4 +149,4 @@ function ProductModal({ onClose }) {
   );
 }
 
-export default ProductModal;
+export default ProductEditModal;

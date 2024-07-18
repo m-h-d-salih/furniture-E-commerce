@@ -36,11 +36,11 @@
       "confirmPassword": "12345678",
       "cart": [
         {
-          "id": "3",
-          "urlimg": "https://images.pexels.com/photos/116910/pexels-photo-116910.jpeg?cs=srgb&dl=pexels-mikebirdy-116910.jpg&fm=jpg",
-          "title": "Stylish Living Room chair",
+          "id": "2",
+          "urlimg": "https://images.woodenstreet.de/image/data/bed-with-storage-mdf/harper-bed-with-box-storage/exotic-teak/updated/1.jpg",
+          "title": "Harper Bed with Box",
           "price": 800,
-          "category": "chair",
+          "category": "bed",
           "quantity": 1,
           "description": "Furniture refers to household equipment that serves various purposes. It can be made from materials such as wood, metal, plastics, marble, glass, fabrics, or related materials."
         }
@@ -62,15 +62,6 @@
       "email": "amal@gmail.com",
       "password": "amalkundan",
       "confirmPassword": "amalkundan",
-      "cart": [],
-      "order": []
-    },
-    {
-      "id": "ef2c",
-      "name": "admin",
-      "email": "admin@gmail.com",
-      "password": "iamadmin",
-      "confirmPassword": "iamadmin",
       "cart": [],
       "order": []
     }
@@ -120,6 +111,42 @@
       "category": "chair",
       "quantity": 1,
       "description": "Furniture refers to household equipment that serves various purposes. It can be made from materials such as wood, metal, plastics, marble, glass, fabrics, or related materials."
+    },
+    {
+      "id": "8",
+      "urlimg": "https://images.woodenstreet.de/image/data/rocking-chairs/eleanor-comfort-cushioned-back-seat-teak-wood-rocking-chair-brown/updated/1.jpg",
+      "title": "teakwood  chair",
+      "price": 15000,
+      "category": "chair",
+      "quantity": 1,
+      "description": "Furniture refers to household equipment that serves various purposes. It can be made from materials such as wood, metal, plastics, marble, glass, fabrics, or related materials."
+    },
+    {
+      "id": "9",
+      "urlimg": "https://images.woodenstreet.de/image/data/fabric-sofa/Mellisa-fabric-sofa/new-logo/teak/1.jpg",
+      "title": "wood sofa",
+      "price": 20000,
+      "category": "sofa",
+      "quantity": 1,
+      "description": "Furniture refers to household equipment that serves various purposes. It can be made from materials such as wood, metal, plastics, marble, glass, fabrics, or related materials."
+    },
+    {
+      "id": "1d33",
+      "urlimg": "https://teaklab.com/wp-content/uploads/2019/08/2018modern-Style-of-Sofa-for-Home-Furniture-OWSF-002-2-1.jpg",
+      "title": "leather sofa",
+      "price": 12000,
+      "category": "sofa",
+      "quantity": 6,
+      "description": "A sofa set is a truly regal piece of furniture for your home. Finely crafted from the best quality teak wood and superior quality Leatherite Fabric"
+    },
+    {
+      "id": "2f65",
+      "urlimg": "https://image.made-in-china.com/2f0j00WuNbSUynyhqC/Latest-Wooden-Box-Bed-Designs-Modern-Bedroom-Furniture-Set-of-King-and-Queen-Size-Bed.webp",
+      "title": "wooden box bed",
+      "price": 20000,
+      "category": "bed",
+      "quantity": 12,
+      "description": "Latest Wooden Box Bed Designs Modern Bedroom Furniture Set of King and Queen Size Bed"
     }
   ]
 }
