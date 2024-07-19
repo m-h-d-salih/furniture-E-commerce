@@ -1,8 +1,10 @@
-import React, { useContext, useState } from 'react';
-import { Formik, Form, ErrorMessage } from 'formik';
+import React, { useContext,  useEffect,  useState } from 'react';
+import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import axios from 'axios';
 import { MyContext } from '../../../context/cartContext';
+import toast, { Toaster } from "react-hot-toast";
+
 
 const validationSchema = Yup.object({
   urlimg: Yup.string().url('Invalid URL').required('Required'),
@@ -13,11 +15,23 @@ const validationSchema = Yup.object({
   description: Yup.string().required('Required'),
 });
 
-function ProductEditModal({ onClose,product }) {
-  const {products,setProducts}=useContext(MyContext);
-//   const [isModalOpen, setModalOpen] = useState(false);   
+function ProductEditModal({ onClose, product }) {
+  const { products, setProducts } = useContext(MyContext);
+  const [productData, setProductData] = useState(null);
+  const id = product.id;
+  useEffect(()=>{
+    axios
+    .get(`http://localhost:8000/products/${id}`)
+    .then((response) => {
+      setProductData(response.data);
+    })
+    .catch((error) => {
+      console.error("Error fetching product:", error);
+    });
+  },[id])
+  // console.log(id);
 
-  const initialValues = {
+  const initialValues = { 
     urlimg: product.urlimg,
     title: product.title,
     price: product.price,
@@ -25,8 +39,10 @@ function ProductEditModal({ onClose,product }) {
     quantity: product.quantity,
     description: product.description,
   };
+
   return (
     <div>
+      <Toaster />;
       <div className="fixed inset-0 flex items-center justify-center z-50 bg-gray-800 bg-opacity-75">
         <div className="relative bg-white p-8 rounded shadow-lg max-w-md w-full">
           <button
@@ -43,84 +59,88 @@ function ProductEditModal({ onClose,product }) {
             validationSchema={validationSchema}
             onSubmit={(values, { setSubmitting }) => {
               console.log(values);
-             
-              setSubmitting(false);
-              onClose();
-            }
-        
-        }
+              const updated = Object.keys(values).some(
+                (key) => values[key] !== productData[key]
+              );
+              if (updated) {
+                axios
+                  .put(`http://localhost:8000/products/${id}`, values)
+                  .then((response) => {
+                    console.log("Product updated successfully:", response.data);
+                    toast.success("Product updated successfully");
+                        
+                   
+                  })
+                  .catch((error) => {
+                    console.error("Error updating product:", error);
+                    toast.error("Failed updating product");
+                  })
+                  .finally(() => {
+                    setSubmitting(false);
+                    onClose();
+                  });
+              } else {
+                toast.info("No changes applied");
+                setSubmitting(false);
+                onClose();
+              }
+              
+              
+            }}
           >
-            {({ isSubmitting, handleChange, handleBlur }) => (
+            {({ isSubmitting }) => (
               <Form>
                 <div className="mb-4">
                   <label htmlFor="urlimg" className="block text-gray-700">Image URL</label>
-                  <input
+                  <Field
                     type="text"
                     name="urlimg"
-                    onChange={handleChange}
-                    onBlur={handleBlur}
                     className="mt-1 p-2 border border-gray-400 rounded w-full"
-                    value={initialValues.urlimg}
                   />
                   <ErrorMessage name="urlimg" component="div" className="text-red-500 text-sm" />
                 </div>
                 <div className="mb-4">
                   <label htmlFor="title" className="block text-gray-700">Title</label>
-                  <input
+                  <Field
                     type="text"
                     name="title"
-                    onChange={handleChange}
-                    onBlur={handleBlur}
                     className="mt-1 p-2 border border-gray-400 rounded w-full"
-                    value={initialValues.title}
                   />
                   <ErrorMessage name="title" component="div" className="text-red-500 text-sm" />
                 </div>
                 <div className="mb-4">
                   <label htmlFor="price" className="block text-gray-700">Price</label>
-                  <input
+                  <Field
                     type="number"
                     name="price"
-                    onChange={handleChange}
-                    onBlur={handleBlur}
                     className="mt-1 p-2 border border-gray-400 rounded w-full"
-                    value={initialValues.price}
                   />
                   <ErrorMessage name="price" component="div" className="text-red-500 text-sm" />
                 </div>
                 <div className="mb-4">
                   <label htmlFor="category" className="block text-gray-700">Category</label>
-                  <input
+                  <Field
                     type="text"
                     name="category"
-                    onChange={handleChange}
-                    onBlur={handleBlur}
                     className="mt-1 p-2 border border-gray-400 rounded w-full"
-                    value={initialValues.category}
                   />
                   <ErrorMessage name="category" component="div" className="text-red-500 text-sm" />
                 </div>
                 <div className="mb-4">
                   <label htmlFor="quantity" className="block text-gray-700">Quantity</label>
-                  <input
+                  <Field
                     type="number"
                     name="quantity"
-                    onChange={handleChange}
-                    onBlur={handleBlur}
                     className="mt-1 p-2 border border-gray-400 rounded w-full"
-                    value={initialValues.quantity}
                   />
                   <ErrorMessage name="quantity" component="div" className="text-red-500 text-sm" />
                 </div>
                 <div className="mb-4">
                   <label htmlFor="description" className="block text-gray-700">Description</label>
-                  <input
+                  <Field
                     type="text"
                     name="description"
-                    onChange={handleChange}
-                    onBlur={handleBlur}
                     className="mt-1 p-2 border border-gray-400 rounded w-full"
-                    value={initialValues.description}
                   />
                   <ErrorMessage name="description" component="div" className="text-red-500 text-sm" />
                 </div>
@@ -137,7 +157,7 @@ function ProductEditModal({ onClose,product }) {
                     disabled={isSubmitting}
                     className="py-2 px-4 bg-blue-500 text-white rounded hover:bg-blue-600"
                   >
-                    Submit
+                    Edit
                   </button>
                 </div>
               </Form>

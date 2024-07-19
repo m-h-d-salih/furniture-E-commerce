@@ -9,8 +9,9 @@ import { FaCheckCircle } from 'react-icons/fa';
 const UserPaymentAddress = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const id = localStorage.getItem('id');
-  const { cart,setCart } = useContext(MyContext);
+  const { cart,setCart,order,setOrder } = useContext(MyContext);
   const navigate = useNavigate();
+  
 
   const formik = useFormik({
     initialValues: {
@@ -52,17 +53,14 @@ const UserPaymentAddress = () => {
         orderDate:new Date().toString(),
        }
        console.log(neworder);
-     
+     let allorder=[...order,neworder]
       // axios.patch(`http://localhost:8000/user/${id}`, { order: values })
       //   .then(res => {
       //     console.log('done');
       //     setIsModalOpen(true);
       //   })
       //   .catch(error => console.log(error));
-      axios.patch(`http://localhost:5000/users/${id}`, {
-        order: [...order, neworder],
-        cart: [],
-      })
+      axios.patch(`http://localhost:8000/user/${id}`, {order: allorder,cart:[]})
     .then(res=>{console.log('done');setCart([]);})
     .catch(error=>console.log('error'));
 

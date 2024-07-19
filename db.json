@@ -34,18 +34,54 @@
       "email": "salihsha656@gmail.com",
       "password": "12345678",
       "confirmPassword": "12345678",
-      "cart": [
+      "cart": [],
+      "order": [
         {
-          "id": "2",
-          "urlimg": "https://images.woodenstreet.de/image/data/bed-with-storage-mdf/harper-bed-with-box-storage/exotic-teak/updated/1.jpg",
-          "title": "Harper Bed with Box",
-          "price": 800,
-          "category": "bed",
-          "quantity": 1,
-          "description": "Furniture refers to household equipment that serves various purposes. It can be made from materials such as wood, metal, plastics, marble, glass, fabrics, or related materials."
+          "cartitems": [
+            {
+              "urlimg": "https://t4.ftcdn.net/jpg/02/57/64/17/360_F_257641770_4eAFTJQK3QiEoymyVYyKdXMBRocN1eKw.jpg",
+              "title": "Modern Office cabord",
+              "price": 800,
+              "category": "cabord",
+              "quantity": 12,
+              "description": "Furniture refers to household equipment that serves various purposes. It can be made from materials such as wood, metal, plastics, marble, glass, fabrics, or related materials.",
+              "id": "4"
+            },
+            {
+              "urlimg": "https://5.imimg.com/data5/SELLER/Default/2024/3/404616160/BA/KZ/PD/24135102/luxury-bedroom-furniture-wooden-bed-500x500.webp",
+              "title": "luxuary bed",
+              "price": 8100,
+              "category": "bed",
+              "quantity": 4,
+              "description": "Furniture refers to household equipment that serves various purposes. It can be made from materials such as wood, metal, plastics, marble, glass, fabrics, or related materials.",
+              "id": "5"
+            }
+          ],
+          "totalprice": 8900,
+          "email": "salihsha656@gmail.com",
+          "address": "5tgmyuj654ew",
+          "phone": "7894563211",
+          "orderDate": "Fri Jul 19 2024 11:21:59 GMT+0530 (India Standard Time)"
+        },
+        {
+          "cartitems": [
+            {
+              "urlimg": "https://images.woodenstreet.de/image/data/bed-with-storage-mdf/harper-bed-with-box-storage/exotic-teak/updated/1.jpg",
+              "title": "Harper Bed with Box",
+              "price": 800,
+              "category": "bed",
+              "quantity": 10,
+              "description": "Furniture refers to household equipment that serves various purposes. It can be made from materials such as wood, metal, plastics, marble, glass, fabrics, or related materials.",
+              "id": "2"
+            }
+          ],
+          "totalprice": 800,
+          "email": "salihsha656@gmail.com",
+          "address": "5tgmyuj654ew",
+          "phone": "1236547896",
+          "orderDate": "Fri Jul 19 2024 11:23:02 GMT+0530 (India Standard Time)"
         }
-      ],
-      "order": []
+      ]
     },
     {
       "id": "b351",
@@ -64,35 +100,44 @@
       "confirmPassword": "amalkundan",
       "cart": [],
       "order": []
+    },
+    {
+      "id": "fec6",
+      "name": "admin",
+      "email": "admin@gmail.com",
+      "password": "iamadmin",
+      "confirmPassword": "iamadmin",
+      "cart": [],
+      "order": []
     }
   ],
   "products": [
     {
-      "id": "2",
       "urlimg": "https://images.woodenstreet.de/image/data/bed-with-storage-mdf/harper-bed-with-box-storage/exotic-teak/updated/1.jpg",
       "title": "Harper Bed with Box",
       "price": 800,
       "category": "bed",
-      "quantity": 1,
-      "description": "Furniture refers to household equipment that serves various purposes. It can be made from materials such as wood, metal, plastics, marble, glass, fabrics, or related materials."
+      "quantity": 10,
+      "description": "Furniture refers to household equipment that serves various purposes. It can be made from materials such as wood, metal, plastics, marble, glass, fabrics, or related materials.",
+      "id": "2"
     },
     {
-      "id": "4",
       "urlimg": "https://t4.ftcdn.net/jpg/02/57/64/17/360_F_257641770_4eAFTJQK3QiEoymyVYyKdXMBRocN1eKw.jpg",
       "title": "Modern Office cabord",
       "price": 800,
       "category": "cabord",
-      "quantity": 1,
-      "description": "Furniture refers to household equipment that serves various purposes. It can be made from materials such as wood, metal, plastics, marble, glass, fabrics, or related materials."
+      "quantity": 12,
+      "description": "Furniture refers to household equipment that serves various purposes. It can be made from materials such as wood, metal, plastics, marble, glass, fabrics, or related materials.",
+      "id": "4"
     },
     {
-      "id": "5",
       "urlimg": "https://5.imimg.com/data5/SELLER/Default/2024/3/404616160/BA/KZ/PD/24135102/luxury-bedroom-furniture-wooden-bed-500x500.webp",
       "title": "luxuary bed",
       "price": 8100,
       "category": "bed",
-      "quantity": 1,
-      "description": "Furniture refers to household equipment that serves various purposes. It can be made from materials such as wood, metal, plastics, marble, glass, fabrics, or related materials."
+      "quantity": 4,
+      "description": "Furniture refers to household equipment that serves various purposes. It can be made from materials such as wood, metal, plastics, marble, glass, fabrics, or related materials.",
+      "id": "5"
     },
     {
       "id": "6",

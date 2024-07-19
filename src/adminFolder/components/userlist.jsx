@@ -1,14 +1,15 @@
 import React, { useContext, useState } from 'react';
 import { MyContext } from '../../context/cartContext';
 import UserCartModal from './modal/userCartmodal';
+import UserOrderModal from './modal/userOrdermodal';
 
 
 function UserList() {
     const {users,deleteuser}=useContext(MyContext)
     const [selectedUser, setSelectedUser] = useState(null);
     const [isModalOpen, setIsModalOpen] = useState(false);
-  
-    const handleRowClick = (user) => {
+    const [isOrderModalOpen, setIsOrderModalOpen] = useState(false);
+    const handleCartClick = (user) => {
         setSelectedUser(user);
         setIsModalOpen(true);
       };
@@ -17,6 +18,14 @@ function UserList() {
         setIsModalOpen(false);
         setSelectedUser(null);
       };
+      const handleOrderClick = (user) => {
+        setSelectedUser(user);
+        setIsOrderModalOpen(true);
+    };
+    const handleCloseOrderModal = () => {
+        setIsOrderModalOpen(false);
+        setSelectedUser(null);
+    };
     
 
     return (
@@ -41,13 +50,14 @@ function UserList() {
                                 <td className="py-2 px-4">{user.email}</td>
                                 <td className="py-2 px-4">
                                     <button className="bg-blue-500 text-white px-4 py-1 rounded hover:bg-blue-700"
-                                     onClick={() => handleRowClick(user)}
+                                     onClick={() => handleCartClick(user)}
                                     >
                                         View Cart
                                     </button>
                                 </td>
                                 <td className="py-2 px-4">
-                                    <button className="bg-green-500 text-white px-4 py-1 rounded hover:bg-green-700">
+                                    <button className="bg-green-500 text-white px-4 py-1 rounded hover:bg-green-700"
+                                    onClick={()=>handleOrderClick(user)}>
                                         View Order
                                     </button>
                                 </td>
@@ -68,6 +78,13 @@ function UserList() {
           user={selectedUser} 
         />
       )}
+      {selectedUser && (
+                    <UserOrderModal
+                        isOpen={isOrderModalOpen}
+                        onClose={handleCloseOrderModal}
+                        user={selectedUser}
+                    />
+                )}
 
             </div>
         </div>

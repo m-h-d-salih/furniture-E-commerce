@@ -11,6 +11,7 @@ function AdminProducts() {
   const [searchTerm, setSearchTerm] = useState('');
   const [isModalOpen, setModalOpen] = useState(false);    
   const [iseditModalOpen, seteditModalOpen] = useState(false);    
+  const [selectedProduct, setSelectedProduct] = useState(null);
     const initialValues = {
     urlimg: '',
     title: '',
@@ -23,6 +24,10 @@ function AdminProducts() {
   
   const handleSearchChange = (event) => {
     setSearchTerm(event.target.value);
+  };
+  const handleEditClick = (product) => {
+    setSelectedProduct(product);
+    seteditModalOpen(true);
   };
  
 
@@ -81,17 +86,15 @@ function AdminProducts() {
                 <div className="text-red-600">{item.price} Rs</div>
               </div>
               <div className="p-4 flex justify-between">
-                <button className="bg-black text-white p-2  rounded w-1/3 hover:bg-blue-700" onClick={() => {seteditModalOpen(true);}}>
+                <button className="bg-black text-white p-2  rounded w-1/3 hover:bg-blue-700" onClick={() => {handleEditClick(item)}}>
                   Edit
                 </button>
-                {
-                  iseditModalOpen&&
-                  <ProductEditModal
-                  onClose={() => seteditModalOpen(false)}
-                  product={item}
-                  
-                  />
-                }
+                {iseditModalOpen && selectedProduct && (
+        <ProductEditModal
+          onClose={() => seteditModalOpen(false)}
+          product={selectedProduct}
+        />
+      )}
                 <button className="bg-black text-white p-2 rounded w-1/3 hover:bg-blue-700 " onClick={() => removeproduct(item)}>
                   Delete
                 </button>

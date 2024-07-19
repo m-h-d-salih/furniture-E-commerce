@@ -9,16 +9,32 @@ const CartProvider = ({ children }) => {
   const [isLogged, setIsLogged] = useState(false);
   const [users, setUsers] = useState([]);
   const [orderlist, setOrderlist] = useState(["mhg"]);
+  const [order, setOrder] = useState([]);
   const [productslist, setProductslist] = useState([]);
   const [products, setProducts] = useState([]);
+  const [revenue, setRevenue] = useState(0);
 
   useEffect(()=>{
     axios.get(`http://localhost:8000/products`)
     .then(res=>setProducts(res.data))
       
     },[])
-
-
+  useEffect(()=>{
+    axios.get(`http://localhost:8000/user/${id}`)
+    .then(res=>setOrder(res.data.order))
+      
+    },[])
+    useEffect(() => {
+      const totalRevenue = users.reduce((acc, user) => 
+        acc + user.order?.reduce((orderAcc, order) => orderAcc + order.totalprice, 0) || 0
+      , 0);
+      setRevenue(totalRevenue);
+    }, [users]);
+    
+    // console.log(revenue);
+    
+  
+    // console.log(revenue);
   useEffect(() => {
     axios
       .get(`http://localhost:8000/user/${id}`)
@@ -152,6 +168,9 @@ const CartProvider = ({ children }) => {
         totalprice,
         removeproduct,
         products,
+        setOrder,
+        order,
+        revenue,
       }}
     >
       {children}

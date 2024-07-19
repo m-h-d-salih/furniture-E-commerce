@@ -15,6 +15,7 @@ import AdminHome from "./adminFolder/components/adminHomme";
 import Userlist from "./adminFolder/components/userlist";
 import AdminProducts from "./adminFolder/components/adminProducts";
 import UserPaymentaddress from "./user folder/userPayment/userPaymentaddress";
+import { Toaster } from "react-hot-toast";
 
 
 // import CartProvider from "./context/cartContext";
@@ -24,13 +25,16 @@ function App() {
 
   return (
     <>
+    <Toaster/>
       {/* <CartProvider> */}
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Navbar />}>
+          
             <Route path="shop" element={<UserShop />} />
             <Route path="cart" element={<UserCart />} />
             <Route path="/" element={<Userhome />} />
+            
           </Route>
           <Route path="signup" element={<Userregistrationform />} />
           <Route path="login" element={<Userloginform />} />
