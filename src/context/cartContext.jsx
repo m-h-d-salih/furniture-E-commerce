@@ -8,6 +8,7 @@ const CartProvider = ({ children }) => {
   const id = localStorage.getItem("id");
   const [isLogged, setIsLogged] = useState(false);
   const [users, setUsers] = useState([]);
+  const [user, setUser] = useState([]);
   const [orderlist, setOrderlist] = useState(["mhg"]);
   const [order, setOrder] = useState([]);
   const [productslist, setProductslist] = useState([]);
@@ -17,6 +18,11 @@ const CartProvider = ({ children }) => {
   useEffect(()=>{
     axios.get(`http://localhost:8000/products`)
     .then(res=>setProducts(res.data))
+      
+    },[])
+  useEffect(()=>{
+    axios.get(`http://localhost:8000/user/${id}`)
+    .then(res=>setUser(res.data))
       
     },[])
   useEffect(()=>{
@@ -81,14 +87,7 @@ const CartProvider = ({ children }) => {
   };
  
 
-  // const login=()=>{
-  //   setIsLogged(true)
-  //   console.log(isLogged);
-  // }
-  // const logout=()=>{
-  //   setIsLogged(false)
-  //   console.log(isLogged);
-  // }
+
 
   useEffect(() => {
     if (id) {
@@ -171,6 +170,7 @@ const CartProvider = ({ children }) => {
         setOrder,
         order,
         revenue,
+        user
       }}
     >
       {children}

@@ -5,6 +5,7 @@ import { MyContext } from '../../context/cartContext';
 import { useNavigate } from 'react-router-dom';
 import axios from "axios";
 import { FaCheckCircle } from 'react-icons/fa';
+import toast, { Toaster } from 'react-hot-toast';
 
 const UserPaymentAddress = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -52,7 +53,7 @@ const UserPaymentAddress = () => {
         phone:values.phone,
         orderDate:new Date().toString(),
        }
-       console.log(neworder);
+      //  console.log(neworder);
      let allorder=[...order,neworder]
       // axios.patch(`http://localhost:8000/user/${id}`, { order: values })
       //   .then(res => {
@@ -60,9 +61,17 @@ const UserPaymentAddress = () => {
       //     setIsModalOpen(true);
       //   })
       //   .catch(error => console.log(error));
-      axios.patch(`http://localhost:8000/user/${id}`, {order: allorder,cart:[]})
-    .then(res=>{console.log('done');setCart([]);})
-    .catch(error=>console.log('error'));
+      axios.patch(`http://localhost:8000/user/${id}`, { order: allorder, cart: [] })
+      .then(res => {
+        toast.success("Payment successful");
+        console.log('done');
+        setTimeout(()=>{
+          navigate(`/shop`);
+        },1000)
+        
+       
+      })
+      // .catch(error => console.log('error'));
 
       
     },

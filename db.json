@@ -1,34 +1,6 @@
 {
   "user": [
     {
-      "id": "5fb7",
-      "name": "nidha",
-      "email": "nidhasalih@gmail.com",
-      "password": "nidhasalih",
-      "confirmPassword": "nidhasalih",
-      "cart": [
-        {
-          "id": "2",
-          "urlimg": "https://images.woodenstreet.de/image/data/bed-with-storage-mdf/harper-bed-with-box-storage/exotic-teak/updated/1.jpg",
-          "title": "Harper Bed with Box",
-          "price": 800,
-          "category": "bed",
-          "quantity": 1,
-          "description": "Furniture refers to household equipment that serves various purposes. It can be made from materials such as wood, metal, plastics, marble, glass, fabrics, or related materials."
-        },
-        {
-          "id": "3",
-          "urlimg": "https://images.pexels.com/photos/116910/pexels-photo-116910.jpeg?cs=srgb&dl=pexels-mikebirdy-116910.jpg&fm=jpg",
-          "title": "Stylish Living Room chair",
-          "price": 800,
-          "category": "chair",
-          "quantity": 1,
-          "description": "Furniture refers to household equipment that serves various purposes. It can be made from materials such as wood, metal, plastics, marble, glass, fabrics, or related materials."
-        }
-      ],
-      "order": []
-    },
-    {
       "id": "04de",
       "name": "salih",
       "email": "salihsha656@gmail.com",
@@ -39,47 +11,20 @@
         {
           "cartitems": [
             {
-              "urlimg": "https://t4.ftcdn.net/jpg/02/57/64/17/360_F_257641770_4eAFTJQK3QiEoymyVYyKdXMBRocN1eKw.jpg",
-              "title": "Modern Office cabord",
-              "price": 800,
-              "category": "cabord",
-              "quantity": 12,
-              "description": "Furniture refers to household equipment that serves various purposes. It can be made from materials such as wood, metal, plastics, marble, glass, fabrics, or related materials.",
-              "id": "4"
-            },
-            {
-              "urlimg": "https://5.imimg.com/data5/SELLER/Default/2024/3/404616160/BA/KZ/PD/24135102/luxury-bedroom-furniture-wooden-bed-500x500.webp",
-              "title": "luxuary bed",
-              "price": 8100,
-              "category": "bed",
-              "quantity": 4,
-              "description": "Furniture refers to household equipment that serves various purposes. It can be made from materials such as wood, metal, plastics, marble, glass, fabrics, or related materials.",
-              "id": "5"
+              "id": "6",
+              "urlimg": "https://rajadigitalplanets.com/cdn/shop/products/61KydgWLemL_800x.jpg?v=1633516868",
+              "title": "dinning sofa",
+              "price": 1100,
+              "category": "sofa",
+              "quantity": 1,
+              "description": "Furniture refers to household equipment that serves various purposes. It can be made from materials such as wood, metal, plastics, marble, glass, fabrics, or related materials."
             }
           ],
-          "totalprice": 8900,
+          "totalprice": 1100,
           "email": "salihsha656@gmail.com",
           "address": "5tgmyuj654ew",
           "phone": "7894563211",
-          "orderDate": "Fri Jul 19 2024 11:21:59 GMT+0530 (India Standard Time)"
-        },
-        {
-          "cartitems": [
-            {
-              "urlimg": "https://images.woodenstreet.de/image/data/bed-with-storage-mdf/harper-bed-with-box-storage/exotic-teak/updated/1.jpg",
-              "title": "Harper Bed with Box",
-              "price": 800,
-              "category": "bed",
-              "quantity": 10,
-              "description": "Furniture refers to household equipment that serves various purposes. It can be made from materials such as wood, metal, plastics, marble, glass, fabrics, or related materials.",
-              "id": "2"
-            }
-          ],
-          "totalprice": 800,
-          "email": "salihsha656@gmail.com",
-          "address": "5tgmyuj654ew",
-          "phone": "1236547896",
-          "orderDate": "Fri Jul 19 2024 11:23:02 GMT+0530 (India Standard Time)"
+          "orderDate": "Sat Jul 20 2024 12:03:22 GMT+0530 (India Standard Time)"
         }
       ]
     },
@@ -117,7 +62,7 @@
       "title": "Harper Bed with Box",
       "price": 800,
       "category": "bed",
-      "quantity": 10,
+      "quantity": 1,
       "description": "Furniture refers to household equipment that serves various purposes. It can be made from materials such as wood, metal, plastics, marble, glass, fabrics, or related materials.",
       "id": "2"
     },
@@ -126,7 +71,7 @@
       "title": "Modern Office cabord",
       "price": 800,
       "category": "cabord",
-      "quantity": 12,
+      "quantity": 1,
       "description": "Furniture refers to household equipment that serves various purposes. It can be made from materials such as wood, metal, plastics, marble, glass, fabrics, or related materials.",
       "id": "4"
     },
@@ -135,7 +80,7 @@
       "title": "luxuary bed",
       "price": 8100,
       "category": "bed",
-      "quantity": 4,
+      "quantity": 1,
       "description": "Furniture refers to household equipment that serves various purposes. It can be made from materials such as wood, metal, plastics, marble, glass, fabrics, or related materials.",
       "id": "5"
     },
@@ -181,7 +126,7 @@
       "title": "leather sofa",
       "price": 12000,
       "category": "sofa",
-      "quantity": 6,
+      "quantity": 1,
       "description": "A sofa set is a truly regal piece of furniture for your home. Finely crafted from the best quality teak wood and superior quality Leatherite Fabric"
     },
     {
@@ -190,7 +135,7 @@
       "title": "wooden box bed",
       "price": 20000,
       "category": "bed",
-      "quantity": 12,
+      "quantity": 1,
       "description": "Latest Wooden Box Bed Designs Modern Bedroom Furniture Set of King and Queen Size Bed"
     }
   ]

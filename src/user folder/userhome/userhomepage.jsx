@@ -3,6 +3,7 @@ import homeimg from "../../assets/home.jpg";
 import './userhome.css';
 import { useContext } from "react";
 import { MyContext } from "../../context/cartContext";
+import UserFooter from "../userFooter/userFooter";
 
 const Userhome=()=>{
   const {products}=useContext(MyContext);
@@ -35,7 +36,7 @@ const filteredproduct=products.filter((item,index)=>index<5)
           </div>
         ))}
       </div>
-
+        <UserFooter/>
       </>
     )
 }

@@ -62,7 +62,7 @@ function UserCart() {
         <p className="text-red-600 text-2xl text-center mt-56">cart is Empty</p>
       )}
 
-      <div className="fixed bottom-0 left-0 right-0 p-2 flex items-center justify-center bg-white shadow-md">
+      <div className=" fixed bottom-0 left-0 right-0 p-2 flex items-center justify-center bg-white shadow-md">
         <span className="mr-2 ">
           Total Price :
           {cart.reduce((acc, item) => acc + item.quantity * item.price, 0)}
