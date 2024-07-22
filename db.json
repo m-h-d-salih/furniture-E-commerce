@@ -6,7 +6,17 @@
       "email": "salihsha656@gmail.com",
       "password": "12345678",
       "confirmPassword": "12345678",
-      "cart": [],
+      "cart": [
+        {
+          "id": "6",
+          "urlimg": "https://rajadigitalplanets.com/cdn/shop/products/61KydgWLemL_800x.jpg?v=1633516868",
+          "title": "dinning sofa",
+          "price": 1100,
+          "category": "sofa",
+          "quantity": 1,
+          "description": "Furniture refers to household equipment that serves various purposes. It can be made from materials such as wood, metal, plastics, marble, glass, fabrics, or related materials."
+        }
+      ],
       "order": [
         {
           "cartitems": [
