@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
-import { MyContext } from '../../context/cartContext';
+// import { MyContext } from '../../../context/cartContext';
 import { useNavigate } from 'react-router-dom';
+import { MyContext } from '../../context/cartContext';
 import bgimg from '../../assets/adminhome1.jpg'; 
 
 function AdminHome() {

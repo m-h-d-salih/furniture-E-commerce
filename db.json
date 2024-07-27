@@ -6,25 +6,44 @@
       "email": "salihsha656@gmail.com",
       "password": "12345678",
       "confirmPassword": "12345678",
-      "cart": [],
+      "cart": [
+        {
+          "urlimg": "https://5.imimg.com/data5/SELLER/Default/2024/3/404616160/BA/KZ/PD/24135102/luxury-bedroom-furniture-wooden-bed-500x500.webp",
+          "title": "luxuary bed",
+          "price": 8100,
+          "category": "bed",
+          "quantity": 2,
+          "description": "Furniture refers to household equipment that serves various purposes. It can be made from materials such as wood, metal, plastics, marble, glass, fabrics, or related materials.",
+          "id": "5"
+        },
+        {
+          "urlimg": "https://t4.ftcdn.net/jpg/02/57/64/17/360_F_257641770_4eAFTJQK3QiEoymyVYyKdXMBRocN1eKw.jpg",
+          "title": "Modern Office cabord",
+          "price": 800,
+          "category": "cabord",
+          "quantity": 1,
+          "description": "Furniture refers to household equipment that serves various purposes. It can be made from materials such as wood, metal, plastics, marble, glass, fabrics, or related materials.",
+          "id": "4"
+        }
+      ],
       "order": [
         {
           "cartitems": [
             {
-              "id": "6",
-              "urlimg": "https://rajadigitalplanets.com/cdn/shop/products/61KydgWLemL_800x.jpg?v=1633516868",
-              "title": "dinning sofa",
-              "price": 1100,
-              "category": "sofa",
-              "quantity": 1,
-              "description": "Furniture refers to household equipment that serves various purposes. It can be made from materials such as wood, metal, plastics, marble, glass, fabrics, or related materials."
+              "urlimg": "https://t4.ftcdn.net/jpg/02/57/64/17/360_F_257641770_4eAFTJQK3QiEoymyVYyKdXMBRocN1eKw.jpg",
+              "title": "Modern Office cabord",
+              "price": 800,
+              "category": "cabord",
+              "quantity": 2,
+              "description": "Furniture refers to household equipment that serves various purposes. It can be made from materials such as wood, metal, plastics, marble, glass, fabrics, or related materials.",
+              "id": "4"
             }
           ],
-          "totalprice": 1100,
-          "email": "salihsha656@gmail.com",
+          "totalprice": 800,
+          "email": "nidhasalih@gmail.com",
           "address": "5tgmyuj654ew",
           "phone": "7894563211",
-          "orderDate": "Sat Jul 20 2024 12:03:22 GMT+0530 (India Standard Time)"
+          "orderDate": "Tue Jul 23 2024 17:11:46 GMT+0530 (India Standard Time)"
         },
         {
           "cartitems": [
@@ -36,22 +55,13 @@
               "quantity": 1,
               "description": "Furniture refers to household equipment that serves various purposes. It can be made from materials such as wood, metal, plastics, marble, glass, fabrics, or related materials.",
               "id": "5"
-            },
-            {
-              "id": "9",
-              "urlimg": "https://images.woodenstreet.de/image/data/fabric-sofa/Mellisa-fabric-sofa/new-logo/teak/1.jpg",
-              "title": "wood sofa",
-              "price": 20000,
-              "category": "sofa",
-              "quantity": 1,
-              "description": "Furniture refers to household equipment that serves various purposes. It can be made from materials such as wood, metal, plastics, marble, glass, fabrics, or related materials."
             }
           ],
-          "totalprice": 28100,
+          "totalprice": 8100,
           "email": "salihsha656@gmail.com",
           "address": "5tgmyuj654ew",
           "phone": "7894563211",
-          "orderDate": "Mon Jul 22 2024 21:16:48 GMT+0530 (India Standard Time)"
+          "orderDate": "Wed Jul 24 2024 15:08:17 GMT+0530 (India Standard Time)"
         }
       ]
     },

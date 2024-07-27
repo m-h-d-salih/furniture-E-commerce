@@ -1,8 +1,8 @@
-import React, { useState, useContext, useEffect } from "react";
-import { MyContext } from "../../context/cartContext";
-import axios from "axios";
-import UserFooter from "../userFooter/userFooter";
+import React, { useState, useContext } from "react";
 import toast from "react-hot-toast";
+
+import UserFooter from "../../components/userFooter";
+import { MyContext } from "../../context/cartContext";
 
 
 function UserShop() {

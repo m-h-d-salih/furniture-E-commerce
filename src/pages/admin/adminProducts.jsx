@@ -1,6 +1,5 @@
 import React, { useState, useContext, useEffect } from "react";
 import { MyContext } from "../../context/cartContext";
-import axios from "axios";
 import ProductModal from "./modal/productModal";
 import ProductEditModal from "./modal/productEditmodal";
 

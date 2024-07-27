@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { Link, Outlet, useNavigate } from 'react-router-dom';
-import { MyContext } from '../../context/cartContext';
+import { MyContext } from '../context/cartContext';
 
 const Adminnavbar = () => {
   const [isOpen, setIsOpen] = useState(false);

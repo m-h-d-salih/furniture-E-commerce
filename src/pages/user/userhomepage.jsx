@@ -1,9 +1,9 @@
 import { Link, useNavigate } from "react-router-dom";
 import homeimg from "../../assets/home.jpg";
-import './userhome.css';
 import { useContext } from "react";
 import { MyContext } from "../../context/cartContext";
-import UserFooter from "../userFooter/userFooter";
+import UserFooter from "../../components/userFooter";
+import './userhome.css';
 
 const Userhome=()=>{
   const {products}=useContext(MyContext);
