@@ -27,7 +27,7 @@ function UserCart() {
                   <div className="font-bold">{item.title}</div>
                   <div className="">{item.description}</div>
                   <div className="text-red-600">
-                    {item.price * item.quantity} Rs
+                   $ {item.price * item.quantity} 
                   </div>
                   <span>
                     {item.quantity} X {item.price}
@@ -65,12 +65,12 @@ function UserCart() {
 
       <div className=" fixed bottom-0 left-0 right-0 p-2 flex items-center justify-center bg-white shadow-md">
         <span className="mr-2 ">
-          Total Price :
+          Total Price : $
           {cart.reduce((acc, item) => acc + item.quantity * item.price, 0)}
         </span>
         <button
           className="bg-orange-500 text-white p-2 rounded hover:bg-slate-900"
-          onClick={() => {navigate('/paymentaddress')}}
+          onClick={() => {cart.length===0?null:navigate('/paymentaddress')}}
         >
           Place Order
         </button>

@@ -3,7 +3,7 @@ import { FaInstagram, FaLinkedin, FaGithub, FaFacebook } from 'react-icons/fa';
 
 function UserFooter() {
   return (
-    <footer className="bg-black text-white p-4   w-full z-10 mt-20">
+    <footer className="bg-black text-white p-4  bottom-0   w-full z-10 mt-20">
     <div className="container mx-auto text-center">
       <div className="flex justify-center space-x-4 mb-4">
         <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-400">

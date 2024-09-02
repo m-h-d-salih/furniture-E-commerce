@@ -103,11 +103,11 @@ const UserPaymentAddress = () => {
           </div>
         ))}
 
-        {/* Total Price and Cart Items */}
+       
         <div>
           <label className='mb-2 mt-2 block' htmlFor="price">TOTAL PRICE:</label>
-          <div className='text-center text-2xl font-bold'>
-            {cart.reduce((acc, item) => acc + item.quantity * item.price, 0)} .Rs
+          <div className='text-center text-2xl font-bold'>$
+            {cart.reduce((acc, item) => acc + item.quantity * item.price, 0)} 
           </div>
         </div>
         <div className="max-h-64 overflow-y-auto">
@@ -115,8 +115,8 @@ const UserPaymentAddress = () => {
             <div key={index} className="mb-2 border border-gray-400 p-3">
               <p><strong>Product:</strong> {item.title}</p>
               <p><strong>Quantity:</strong> {item.quantity}</p>
-              <p><strong>Price:</strong> ₹{item.price}</p>
-              <p><strong>Total:</strong>₹{(item.price * item.quantity)}</p>
+              <p><strong>Price:</strong> ${item.price}</p>
+              <p><strong>Total:</strong>${(item.price * item.quantity)}</p>
             </div>
           ))}
         </div>

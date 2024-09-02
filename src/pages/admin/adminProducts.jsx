@@ -82,7 +82,7 @@ function AdminProducts() {
               <div className="p-4 flex-grow">
                 <div className="text-2xl font-bold ">{item.title}</div>
                 <div className="h-40">{item.description}</div>
-                <div className="text-red-600">{item.price} Rs</div>
+                <div className="text-red-600">$ {item.price} </div>
               </div>
               <div className="p-4 flex justify-between">
                 <button className="bg-black text-white p-2  rounded w-1/3 hover:bg-blue-700" onClick={() => {handleEditClick(item)}}>

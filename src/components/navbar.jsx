@@ -1,47 +1,85 @@
 import React, { useContext, useState } from 'react';
 import { Link, Outlet, useNavigate } from 'react-router-dom';
 import { MyContext } from '../context/cartContext';
+import UserOrderModal from '../pages/admin/modal/userOrdermodal';
+import UserFooter from './userFooter';
 // import { FaInstagram, FaLinkedin, FaGithub, FaFacebook } from 'react-icons/fa';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [cartCount, setCartCount] = useState('none');
   const [isProfileDropdownOpen, setIsProfileDropdownOpen] = useState(false);
+  // const [isOrderModalOpen, setIsOrderModalOpen] = useState(false);
+  const [selectedUser, setSelectedUser] = useState(null);
+
+
   const { cart, setIsLogged, isLogged, user } = useContext(MyContext);
   const navigate = useNavigate();
-
+  // let len=user.order
+  // console.log(user.order?.lenth)
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
-
+  
   const toggleProfileDropdown = () => {
     setIsProfileDropdownOpen(!isProfileDropdownOpen);
   };
-
+  
   const handleItemClick = () => {
-    setIsOpen(false); // Close the dropdown when an item is clicked
+    setIsOpen(false); 
   };
-
+  
   const handleLogout = () => {
     setIsLogged(false);
     localStorage.clear();
     navigate('/login');
   };
+  // const handleOrderClick = (user) => {
+  //   setSelectedUser(user);
+  //   setIsOrderModalOpen(true);
+  // };
+  // const handleCloseOrderModal = () => {
+  //   setIsOrderModalOpen(false);
+  //   setSelectedUser(null);
+  // };
+  // console.log(len.length)
 
   return (
     <>
-      <nav className="bg-white p-4 w-100 fixed top-0 w-full z-10">
-        <div className="container mx-auto flex justify-between items-center border-b-black">
-          <div className="flex items-center">
-            <Link to="/" className="ml-16 lg: text-black text-2xl font-bold">
+      <nav className="bg-white p-4 w-100 fixed top-0 w-full z-10" >
+        <div className="container mx-auto flex justify-between items-center border-b-black" >
+          <div className="flex items-start">
+           <h1> <Link to="/" className="ml-8 lg: text-black text-3xl font-bold">
               WOODEN
-            </Link>
+            </Link></h1>
           </div>
-          <div className="mr-16 md: flex items-center space-x-4 ">
+          <ul className="hidden md:flex mr-16 space-x-10 font-bold ">
+              <li className="text-black  hover:text-orange-600 ">
+                <Link to="/">Home</Link>
+              </li>
+              <li className="text-black hover:text-orange-600 ">
+                <Link to="shop">Shop</Link>
+              </li>
+              <li className="text-black hover:text-orange-600 ">
+                <Link to="shop">About Us</Link>
+              </li>
+              {/* <li className="text-black hover:text-orange-600">
+                <Link
+                  to="login"
+                  onClick={() => {
+                    setIsLogged(false);
+                    localStorage.clear();
+                  }}
+                >
+                  {isLogged ? 'Logout' : 'Login'}
+                </Link>
+              </li> */}
+            </ul>
+          <div className="mr-10 md: flex items-center space-x-4 ">
             <Link to="cart">
               <span
                 style={{ display: cart.length > 0 ? 'inline' : 'none' }}
-                className="absolute text-white h-5 w-3 bg-red-500 rounded font-bold text-sm bottom-10"
+                className="absolute text-red-700 h-5 w-3  rounded-2xl font-bold text-sm bottom-10"
               >
                 {cart.length}
               </span>
@@ -74,6 +112,7 @@ const Navbar = () => {
                     <div className="py-2">
                     {/* {isLogged?():()} */}
                       <span className="block px-4 py-2 text-gray-800">{user.name}</span>
+                      {/* <span className="block px-4 py-2 text-gray-800" onClick={handleOrderClick}>view order</span> */}
                       <button
                         onClick={handleLogout}
                         className="block w-full text-left px-4 py-2 text-gray-800 hover:bg-gray-200"
@@ -96,27 +135,22 @@ const Navbar = () => {
                 </div>
               </Link>
             )}
-            <ul className="hidden md:flex ml-6 space-x-10">
-              <li className="text-black hover:text-orange-600">
-                <Link to="/">Home</Link>
-              </li>
-              <li className="text-black hover:text-orange-600">
-                <Link to="shop">Shop</Link>
-              </li>
-              {/* <li className="text-black hover:text-orange-600">
-                <Link
-                  to="login"
-                  onClick={() => {
-                    setIsLogged(false);
-                    localStorage.clear();
-                  }}
-                >
-                  {isLogged ? 'Logout' : 'Login'}
-                </Link>
-              </li> */}
-            </ul>
-            <button onClick={toggleMenu} className="md:hidden text-black focus:outline-none hover:text-orange-600">
-              <svg
+          
+            <button onClick={toggleMenu} className="md:hidden text-black focus:outline-none ">
+              {isOpen?<svg
+  xmlns="http://www.w3.org/2000/svg"
+  className="h-6 w-6"
+  fill="none"
+  viewBox="0 0 24 24"
+  stroke="currentColor"
+>
+  <path
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    strokeWidth="2"
+    d="M6 18L18 6M6 6l12 12"
+  />
+</svg>:( <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-6 w-6"
                 fill="none"
@@ -124,7 +158,8 @@ const Navbar = () => {
                 stroke="currentColor"
               >
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
+              </svg>)}
+             
             </button>
           </div>
         </div>
@@ -136,6 +171,9 @@ const Navbar = () => {
               </li>
               <li className="text-black hover:text-orange-600" onClick={handleItemClick}>
                 <Link to="shop">Shop</Link>
+              </li>
+              <li className="text-black hover:text-orange-600" onClick={handleItemClick}>
+                <Link to="shop">About Us</Link>
               </li>
               {/* <li
                 className="text-black hover:text-orange-600"
@@ -151,6 +189,13 @@ const Navbar = () => {
           </div>
         )}
       </nav>
+      {/* {selectedUser && (
+                    <UserOrderModal
+                        isOpen={isOrderModalOpen}
+                        onClose={handleCloseOrderModal}
+                        user={selectedUser}
+                    />
+                )} */}
       <main className="mt-14">
         <Outlet />
       </main>
@@ -173,6 +218,7 @@ const Navbar = () => {
           <p>&copy; 2024 Your Company. All rights reserved.</p>
         </div>
       </footer> */}
+      {/* <UserFooter/> */}
     </>
   );
 };

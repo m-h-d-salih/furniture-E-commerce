@@ -27,7 +27,7 @@ function AdminHome() {
         </div>
         <div className='text-3xl text-white h-40 w-52 mb-3 md:mb-0 md:mr-3 text-center  shadow-lg hover:scale-y-105 hover:scale-x-105 bg-gray-100 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-0 border border-gray-100'>
           <h1 className=' font-bold text-center mt-8'>Revenue</h1>
-          <h2 className='text-3xl font-bold text-red-500 mt-3'>{revenue} Rs</h2>
+          <h2 className='text-3xl font-bold text-red-500 mt-3'>$ {revenue} </h2>
         </div>
       </div>
     </>

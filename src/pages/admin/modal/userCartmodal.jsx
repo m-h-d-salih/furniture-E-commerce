@@ -26,8 +26,8 @@ const UserCartModal = ({ isOpen, onClose, user }) => {
               <div key={index} className="mb-2 border border-gray-400 p-3">
                 <p><strong>Product:</strong> {item.title}</p>
                 <p><strong>Quantity:</strong> {item.quantity}</p>
-                <p><strong>Price:</strong> ₹{item.price}</p>
-                <p><strong>Total:</strong>₹{(item.price * item.quantity)}</p>
+                <p><strong>Price:</strong> ${item.price}</p>
+                <p><strong>Total:</strong>${(item.price * item.quantity)}</p>
               </div>
             ))}
           </div>

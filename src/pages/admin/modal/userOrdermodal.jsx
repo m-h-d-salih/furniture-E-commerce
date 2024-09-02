@@ -2,7 +2,7 @@ import React from 'react';
 
 function UserOrderModal({ isOpen, onClose, user }) {
     if (!isOpen) return null;
-    console.log(user.order.length);
+    // console.log(user.order.length);
     return (
         <div className="fixed inset-0 bg-gray-600 bg-opacity-50 flex items-center justify-center">
             <div className="bg-white rounded p-4 w-1/2">
@@ -25,7 +25,7 @@ function UserOrderModal({ isOpen, onClose, user }) {
                                 
                                 
                                 }</p>
-                                <p className='font-bold'>Total Price: <span className='text-red-500 font-normal'>{item.totalprice}</span></p>
+                                <p className='font-bold'>Total Price: $ <span className='text-red-500 font-normal'>{item.totalprice}</span></p>
 
                         </div>
                     ))}
