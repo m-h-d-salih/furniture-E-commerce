@@ -136,7 +136,7 @@ const Navbar = () => {
               </Link>
             )}
           
-            <button onClick={toggleMenu} className="md:hidden text-black focus:outline-none ">
+            <button onClick={toggleMenu} className="fixed right-6 md:hidden text-black focus:outline-none ">
               {isOpen?<svg
   xmlns="http://www.w3.org/2000/svg"
   className="h-6 w-6"
@@ -164,7 +164,7 @@ const Navbar = () => {
           </div>
         </div>
         {isOpen && (
-          <div className="absolute top-16 right-0 w-1/3 bg-white md:hidden z-50">
+          <div className="absolute top-16 right-0  w-1/3 bg-white md:hidden z-50">
             <ul className="space-y-4 mt-4 p-4">
               <li className="text-black hover:text-orange-600" onClick={handleItemClick}>
                 <Link to="/">Home</Link>

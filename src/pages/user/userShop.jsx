@@ -37,7 +37,7 @@ function UserShop() {
 // console.log(filteredProducts.length)
   return (
     <>
-    {/* <div className=" bg-neutral-100"> */}
+    {/* <div className=" bg-neutral-100 "> */}
 
    
       <div className="w-full flex justify-center mb-4 mt-24  ">
@@ -59,11 +59,11 @@ function UserShop() {
           <option value="chair">Chair</option>
         </select>
       </div>
-      <div className="w-full bg-neutral-100">
-      {filteredProducts.length===0?<div className="h-screen bg-neutral-400  text-5xl text-center font-bold"><p className="mt-14">No items</p></div>:(
-          <div className="ml-10 mr-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4  " >
+      <div className="w-full bg-white">
+      {filteredProducts.length===0?<div className="h-screen bg-neutral-200  shadow-2xl  text-5xl text-center font-bold"><p className="mt-14">No items</p></div>:(
+          <div className="ml-10 mr-10 grid grid-cols-1 sm:grid-cols-2 md:mx-16 md:grid-cols-3 lg:grid-cols-3 gap-10 p-4  " >
           {filteredProducts.map((item, index) => (
-            <div className="bg-white shadow-md rounded-lg overflow-hidden flex flex-col justify-between hover:scale-x-105 hover:scale-105 hover:duration-100 "  key={index}>
+            <div className="bg-white shadow-md rounded-lg overflow-hidden flex flex-col justify-between hover:scale-x-105 hover:scale-105 hover:duration-150 "  key={index}>
               <img className="w-full h-40 object-cover" src={item.urlimg} alt="" onClick={() => modalopen(item)} />
               <div className="p-4 flex-grow"  onClick={() => modalopen(item)}>
                 <div>{item.title[0].toUpperCase()}{item.title.slice(1)}</div>

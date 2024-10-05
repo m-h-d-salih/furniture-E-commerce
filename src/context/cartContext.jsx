@@ -96,7 +96,7 @@ const CartProvider = ({ children }) => {
   }, []);
   const addToCart = (item) => {
     const newCart = (prevcart) => {
-      let flag = -1;
+      let flag;
       prevcart.forEach((cartItem, index) => {
         if (cartItem.id === item.id) flag = index;
       });

@@ -1,5 +1,5 @@
 import { Link, useNavigate } from "react-router-dom";
-import homeimg from "../../assets/home.webp";
+import homeimg from "../../assets/adminhome1.jpg";
 import { useContext } from "react";
 import { MyContext } from "../../context/cartContext";
 import UserFooter from "../../components/userFooter";
@@ -14,13 +14,13 @@ const filteredproduct=products.filter((item,index)=>index<5)
         <>
  <div
   className=" bg-fill bg-center min-h-screen flex flex-col md:flex-row items-center flex-wrap justify-around text-center text-black bg-neutral-100 overflow-y-hidden"
-    // style={{ backgroundImage: `url(${homeimg})` }}
+    style={{ backgroundImage: `url(${homeimg})` }}
 > 
   <div className="bg-fill ml-0 mb-0 md:ml-8 mt-8 md:mt-0 pb-52 w-full"    
   //  style={{ backgroundImage: `url(${homeimg})` }}
   >
-    <h1 className="text-4xl md:text-6xl font-bold mb-4 ">Wooden Furniture</h1>
-    <p className="font-bold text-black text-center text-xl">
+    <h1 className="text-4xl md:text-6xl font-bold mb-4 text-white ">Wooden Furniture</h1>
+    <p className="font-bold text-white text-center text-xl">
       Discover the timeless elegance and craftsmanship of our exquisite wooden furniture collection.
     </p>
     <button className="bg-black mt-3 text-white p-2 rounded hover:bg-blue-700" onClick={()=>navigate(`/shop`)}>Shop Now!</button>
