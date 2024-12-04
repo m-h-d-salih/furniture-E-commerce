@@ -130,7 +130,7 @@ function ProductEditModal({ onClose, product }) {
                   <label htmlFor="quantity" className="block text-gray-700">Quantity</label>
                   <Field
                     type="number"
-                    name="quantit y"
+                    name="quantity"
                     className="mt-1 p-2 border border-gray-400 rounded w-full"
                   />
                   <ErrorMessage name="quantity" component="div" className="text-red-500 text-sm" />
