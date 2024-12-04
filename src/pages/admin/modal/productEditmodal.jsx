@@ -58,7 +58,7 @@ function ProductEditModal({ onClose, product }) {
             initialValues={initialValues}
             validationSchema={validationSchema}
             onSubmit={(values, { setSubmitting }) => {
-              console.log(values);
+             
               const updated = Object.keys(values).some(
                 (key) => values[key] !== productData[key]
               );
